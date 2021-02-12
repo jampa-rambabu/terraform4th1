@@ -34,7 +34,7 @@ pipeline
 	steps{
 	sh "docker version"
 	sh "docker build  -t 8297762265/archiveArtifacts:newtag -f Dockerfile ."
-	sh "docker run -p 6060:8080 -d 8297762265/archiveArtifacts:newtag"
+	sh "docker run -p 6080:8080 -d 8297762265/archiveArtifacts:newtag"
 	// This step should not normally be used in your script. Consult the inline help for details.
     withDockerRegistry(credentialsId: 'docker-hub-registry') {
       sh "docker push 8297762265/archiveArtifacts:newtag"
