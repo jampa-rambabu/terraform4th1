@@ -14,8 +14,7 @@ pipeline
 		stage('maven test'){
 		sh "$mvnHome/bin/mvn --version"
 		sh "$mvnHome/bin/mvn clean test surefire-report:report"
-		}
-		}
-		}
+		 }
+	  }
 	}
 }
