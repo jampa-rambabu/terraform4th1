@@ -20,8 +20,8 @@ pipeline
         stage('Test Case and Reports'){
            steps{
         echo "executing the test cases"
-        junit allowEmptyResults: true, testResults: '/var/lib/jenkins/workspace/Jenkins_git_maven_docker_terra_s3/target/surefire-reports/*.xml'
-        publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '/var/lib/jenkins/workspace/Jenkins_git_maven_docker_terra_s3/target/site', reportFiles: 'surefire-report.html', reportName: 'SureFireReportsHTML', reportTitles: ''])
+        junit allowEmptyResults: true, testResults: 'Jenkins_git_maven_docker_terra_s3/target/surefire-reports/*.xml'
+        publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'Jenkins_git_maven_docker_terra_s3/target/site', reportFiles: 'surefire-report.html', reportName: 'SureFireReportsHTML', reportTitles: ''])
         }
 	}
 }
